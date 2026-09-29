@@ -11,13 +11,13 @@ import {
   refundCredits, 
   finalizeGeneration, 
   getUserTransactions, 
-  getUserUsageHgetUserUsageHistoryistory,
+  getUserUsageHistory,
   getCompletedIdempotency,
   TOOL_CREDIT_COSTS
-} from './server/creditscredits'';
+} from './server/credits';
 import { checkRateLimit } from './server/rateLimiter';
 
-dotenv.ccredits'
+dotenv.config();
 
 async function startServer() {
   const app = express();
@@ -52,9 +52,9 @@ async function startServer() {
     return res.status(201).json(result);
   });
 
-  app.post('/apiloginUserin', (req, res) => {
+  app.post('/api/auth/login', (req, res) => {
     const { email, password } = req.body || {};
-    const result = loginUserloginUser(email || '', password || '');
+    const result = loginUser(email || '', password || '');
     if (!result.success) {
       return res.status(401).json(result);
     }
