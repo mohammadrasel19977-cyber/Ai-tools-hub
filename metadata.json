@@ -1,0 +1,6 @@
+{
+  "name": "AI Tools Hub",
+  "description": "All-in-one AI platform featuring 26+ AI tools for writing, image generation, video concepts, business branding, and SEO optimization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
